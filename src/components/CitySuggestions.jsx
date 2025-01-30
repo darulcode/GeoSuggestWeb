@@ -12,7 +12,7 @@ export default function CitySuggestions() {
     if (name.length < 2) return;
     try {
       const response = await fetch(
-        `http://localhost:8080/suggestions/city?name=${name}`
+        `http://45.76.191.227/suggestions/city?name=${name}`
       );
       const data = await response.json();
       setSuggestions(data.suggestions || []);
@@ -24,7 +24,7 @@ export default function CitySuggestions() {
   const fetchSuggestions = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8080/suggestions?q=${city}&latitude=${latitude}&longitude=${longitude}`
+        `http://45.76.191.227/suggestions?q=${city}&latitude=${latitude}&longitude=${longitude}`
       );
       const data = await response.json();
       setResults(data.suggestions || []);
