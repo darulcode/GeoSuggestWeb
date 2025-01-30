@@ -12,7 +12,7 @@ export default function CitySuggestions() {
     if (name.length < 2) return;
     try {
       const response = await fetch(
-        `https://45.76.191.227/suggestions/city?name=${name}`
+        `https://enigjob.my.id/suggestions/city?name=${name}`
       );
       const data = await response.json();
       setSuggestions(data.suggestions || []);
@@ -24,7 +24,7 @@ export default function CitySuggestions() {
   const fetchSuggestions = async () => {
     try {
       const response = await fetch(
-        `https://45.76.191.227/suggestions?q=${city}&latitude=${latitude}&longitude=${longitude}`
+        `https://enigjob.my.id/suggestions?q=${city}&latitude=${latitude}&longitude=${longitude}`
       );
       const data = await response.json();
       setResults(data.suggestions || []);
